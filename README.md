@@ -5,15 +5,17 @@ The app  provided constitutes the 'solution' to the test presented in https://gi
 The solution is built on top of lumen (https://lumen.laravel.com/) a lightweight Laravel based php framework ('the perfect solution for building Laravel microservices' their presentation says).  
 
 ## Solution environment 
-TO DO : fil in relevant info ( composer, requirements,..)
+The project is built on top of Lumen microframework and also I have used Guzzle in order to call other api for Product and Customer
+In order to run the solution you have to define the url for the api of Product and customer which is basically the public folder
+of the current application. In my case I had a VM with Ubuntu on ip 10.10.10.210 so the setting from env was API=http://10.10.10.210/lumen/public/
 
 ## Solution features
 ### Extensibility 
-	Discount Tytpes are represented by classes implementing the IDisount interface found in the ..\app\Discount\ sub folder .
+	Discount Tytpes are represented by classes implementing the IDisount interface found in the ..\app\Discount\Interfaces.
 	Each such class has to implement the methods
 	 - isDisountApplicable() : checking if the current discount is applicable to certain request context 
-	 - .. TO DO : add (getDiscount or applyDiscount)
-	 - .. TO DO : add getName 
+	 - applyDiscount : compute the actual discount as a value
+	 - getName : receive the human readable name of the discount type
 	If a new discount type needs to be added, it will be implemented as a new implementation of the IDiscount interface, with the appropriate condition check and applyDiscount mechanics
 	
 	 
@@ -50,4 +52,3 @@ Sourcecode includes comments describing the detailed functionality implemented.
 	integration tests : 
 	testBasicExample()
 	testDiscountAllGetDiscount()
-
