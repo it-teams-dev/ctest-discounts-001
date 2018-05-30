@@ -10,7 +10,7 @@ In order to run the solution you have to define the url for the api of Product a
 of the current application. In my case I had a VM with Ubuntu on ip 10.10.10.210 so the setting from env was API=http://10.10.10.210/lumen/public/
 
 ## Solution features - Extensibility 
-Discount Types are represented by classes implementing the IDisount interface found in the ..\app\Discount\Interfaces.
+Discount Types are represented by classes implementing the IDiscount interface found in the ..\app\Discount\Interfaces.
 Each such class has to implement the methods
 - isDisountApplicable() : checking if the current discount is applicable to certain request context 
 - applyDiscount : compute the actual discount as a value
